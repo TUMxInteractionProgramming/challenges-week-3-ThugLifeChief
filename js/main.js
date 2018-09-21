@@ -4,7 +4,7 @@ console.log('app is alive');
 function switchChannel (channelName) {
     console.log('Turning into channel ' + channelName);
     $('#app-bar-name').html(channelName);
-    $('#app-bar-location').html(' by <strong><a href="https://map.what3words.com/upgrading.never.helps">upgrading.never.helps</a></strong>');
+    $('#app-bar-location').html(' by <strong><a href="https://map.what3words.com/upgrading.never.helps" target="_blank">upgrading.never.helps</a></strong>');
     $('#app-bar-star img').attr('src','http://ip.lfe.mw.tum.de/sections/star-o.png');
 }
 
