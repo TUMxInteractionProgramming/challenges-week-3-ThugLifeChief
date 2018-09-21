@@ -10,6 +10,10 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
     
 </head>
 <body>
@@ -23,31 +27,27 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>
+        <li onclick="switchChannel('#Yummy')">
             #Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred"><i class="arrow right"></i></span>
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li class="selected" onclick="switchChannel('#SevenContinents')">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <span><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred"><i class="arrow right"></i></span>
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('#KillerApp')">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred"><i class="arrow right"></i></span>
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('#FirstPersonOnMars')">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
             <span><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred"><i class="arrow right"></i></span>
         </li>
-        <li>#Octoberfest
-            <!-- #3 #channels #favorite this is not starred -->
-            <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred"><i class="arrow right"></i></span>
-        </li>
-        <li>#Yummy
+        <li onclick="switchChannel('#Octoberfest')">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred"><i class="arrow right"></i></span>
         </li>
@@ -78,10 +78,11 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
-        <small>by
+        <span id="app-bar-name">#SevenContinents</span>
+        <small id="app-bar-location">by
             <strong>cheeses.yard.applies</strong>
         </small>
+        <span id="app-bar-star"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred"></span>
     </h1>
     <div id="messages">
         <!-- #3 #chat #container -->
