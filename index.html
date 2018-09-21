@@ -57,17 +57,17 @@
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="new" onclick="selectTab('new')" class="selected">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button id="trending" onclick="selectTab('trending')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+        <button id="favorites" onclick="selectTab('favorites')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
@@ -82,7 +82,7 @@
         <small id="app-bar-location">by
             <strong>cheeses.yard.applies</strong>
         </small>
-        <span id="app-bar-star"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred"></span>
+        <span id="app-bar-star" onclick="changeappbarstar()"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred"></span>
     </h1>
     <div id="messages">
         <!-- #3 #chat #container -->
@@ -180,7 +180,7 @@
         </div>
     </div>
     <div id="chat-bar">
-        <button id="emojis-button"><img src="http://ip.lfe.mw.tum.de/sections/smile-o.png"></button>
+        <button id="emojis-button" onclick="toggleEmojibox()"><img src="http://ip.lfe.mw.tum.de/sections/smile-o.png"></button>
         <div id="emojis"> 😀 😃 😄 😁 😆 😅 🤣 😂 🙂</div>
     </div>
 </div>
