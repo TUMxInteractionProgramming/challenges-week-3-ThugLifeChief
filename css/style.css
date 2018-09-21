@@ -30,17 +30,48 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
+    height:60px;
+    line-height: 60px;
+    padding-left: 10px;
+}
+/*mooctus the duck img*/
+h1 img{
+    height: 56px; 
+    width: 50px;   
+    position: absolute;
+    top:4px;
+    left: 5px;
+}
+h1 span{
+    padding-left:50px;
 }
 
 
 /* CHANNELS LIST */
 
 /* #4 #sweat #channels */
+
+/*positioning the channels to the left */
+#channels{
+    position: absolute;
+    right:60%;
+    left:0%;
+    height:100%;
+}
+
+
 ul {
     /* #3 #channels #list modifies h2 to ul */
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    /*place between app-bar and tab-bar*/
+    position:absolute;
+    top:60px;
+    bottom:72px;
+    width: 100%;
+    /*let it scroll*/
+    overflow:auto;
 }
 
 li {
@@ -59,7 +90,11 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
-li img {
+li span {
+    float: right;
+}
+
+li span img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
 }
@@ -67,22 +102,29 @@ li img {
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+#tab-bar, #chat-bar {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    display:flex;
+    justify-content:space-between;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    width:100%;
+    height:72px;
 }
 
 /* #4 add styles to #tab-bar #buttons */
-#tab-bar button {
+#tab-bar button,#chat-bar button {
     background-color: white;
     border: none;
     font-size: 13px;
 
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
-    height: 72px;
+    height: inherit;
     padding: 16px;
 }
 
@@ -99,9 +141,29 @@ li img {
 }
 
 
+
 /* MESSAGES */
+
+/*positioning the chat to the right */
+#chat{
+    position: absolute;
+    left:40%;
+    right:0%;
+    height:100%;
+}
+
+#messages{
+    position: inherit;
+    top:60px;
+    bottom:72px;
+    width: 100%;
+    overflow: auto;
+}
+
+
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
 .message {
+    position: relative;
     /* #3 #chat #width*/
     width: 80%;
 
@@ -110,10 +172,12 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+ 
 }
-
-
 .message h3 {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
     font-size: medium;
 }
 
@@ -133,6 +197,9 @@ li img {
 }
 
 .message button {
+    position: absolute;
+    bottom:8px;
+    right:8px;
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
@@ -143,3 +210,24 @@ li img {
     margin-left: 17.5%;
 }
 
+/*chat bar*/
+#chat-bar{
+    justify-content: flex-start;
+}
+#chat-bar button{
+    width:72px;
+}
+#emojis{
+    position:absolute;
+    bottom:50px;
+    left:16px;
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-color:white;
+    z-index: +1;
+    text-align: left;
+    padding: 16px;
+    overflow-y: auto;
+    font-size: 28px;
+}
